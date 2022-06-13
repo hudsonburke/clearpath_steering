@@ -41,6 +41,19 @@ void callback_fl(const std_msgs::Float64 &fl_command)
     int32_t target = rad_to_encoder_counts(fl_command.data);
     FL_Node->Motion.MoveWentDone();              // Clear the rising edge Move done register
     FL_Node->Motion.MovePosnStart(target, true); // Move to absolute position
+    printf("Moving Node \t%zi \n", *FL_Node);
+    // printf("%f estimated time.\n", FL_Node->Motion.MovePosnDurationMsec(target));
+    // double timeout = myMgr->TimeStampMsec() + FL_Node->Motion.MovePosnDurationMsec(target) + 100; // define a timeout in case the node is unable to enable
+
+    // while (!theNode.Motion.MoveIsDone())
+    // {
+    //     if (myMgr->TimeStampMsec() > timeout)
+    //     {
+    //         ROS_ERROR("Error: Timed out waiting for move to complete\n");
+    //         break;
+    //     }
+    // }
+    // printf("Node \t%zi Move Done\n", *FL_Node);
 }
 
 void callback_fr(const std_msgs::Float64 &fr_command)
@@ -48,6 +61,7 @@ void callback_fr(const std_msgs::Float64 &fr_command)
     int32_t target = rad_to_encoder_counts(fr_command.data);
     FR_Node->Motion.MoveWentDone();              // Clear the rising edge Move done register
     FR_Node->Motion.MovePosnStart(target, true); // Move to absolute position
+    printf("Moving Node \t%zi \n", *FR_Node);
 }
 
 void callback_bl(const std_msgs::Float64 &bl_command)
@@ -55,6 +69,7 @@ void callback_bl(const std_msgs::Float64 &bl_command)
     int32_t target = rad_to_encoder_counts(bl_command.data);
     BL_Node->Motion.MoveWentDone();              // Clear the rising edge Move done register
     BL_Node->Motion.MovePosnStart(target, true); // Move to absolute position
+    printf("Moving Node \t%zi \n", *BL_Node);
 }
 
 void callback_br(const std_msgs::Float64 &br_command)
@@ -62,6 +77,7 @@ void callback_br(const std_msgs::Float64 &br_command)
     int32_t target = rad_to_encoder_counts(br_command.data);
     BR_Node->Motion.MoveWentDone();              // Clear the rising edge Move done register
     BR_Node->Motion.MovePosnStart(target, true); // Move to absolute position
+    printf("Moving Node \t%zi \n", *BR_Node);
 }
 
 int main(int argc, char *argv[])
