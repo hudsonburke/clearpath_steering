@@ -1,0 +1,1 @@
+cmd_/home/hanky-boy/catkin_ws/src/clearpath_steering/TeknicLinuxSoftware/ExarKernelDriver/modules.order := {   echo /home/hanky-boy/catkin_ws/src/clearpath_steering/TeknicLinuxSoftware/ExarKernelDriver/xr_usb_serial_common.ko; :; } | awk '!x[$$0]++' - > /home/hanky-boy/catkin_ws/src/clearpath_steering/TeknicLinuxSoftware/ExarKernelDriver/modules.order

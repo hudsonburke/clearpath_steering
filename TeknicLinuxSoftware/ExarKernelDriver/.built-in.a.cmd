@@ -1,0 +1,1 @@
+cmd_/home/urtiger/dingo_ws/src/clearpath_steering/TeknicLinuxSoftware/ExarKernelDriver/built-in.a := rm -f /home/urtiger/dingo_ws/src/clearpath_steering/TeknicLinuxSoftware/ExarKernelDriver/built-in.a; ar cDPrST /home/urtiger/dingo_ws/src/clearpath_steering/TeknicLinuxSoftware/ExarKernelDriver/built-in.a 
